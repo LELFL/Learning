@@ -22,6 +22,7 @@ namespace _01登录复习
         {
             string user = txtUser.Text.ToString().Trim();
             string pwd = txtPwd.Text.ToString().Trim();
+            pwd = Common.StrToMd5(pwd);
             string sql = "select count(*) from [Users] where loginId = @id and loginPwd = @pwd";
             SqlParameter[] pms = new SqlParameter[]{
                 new SqlParameter("@id",SqlDbType.NVarChar,50){Value=user },
