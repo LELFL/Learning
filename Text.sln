@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01登录复习", "01登录复习\01登录复习.csproj", "{A176612B-B7A7-4986-B51B-B9A437B49710}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Office读写", "02Office读写\02Office读写.csproj", "{2D514AFD-C48D-460F-8D2B-C5380C118059}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A176612B-B7A7-4986-B51B-B9A437B49710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A176612B-B7A7-4986-B51B-B9A437B49710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A176612B-B7A7-4986-B51B-B9A437B49710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D514AFD-C48D-460F-8D2B-C5380C118059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D514AFD-C48D-460F-8D2B-C5380C118059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D514AFD-C48D-460F-8D2B-C5380C118059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D514AFD-C48D-460F-8D2B-C5380C118059}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
