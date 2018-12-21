@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01登录复习", "01登录�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Office读写", "02Office读写\02Office读写.csproj", "{2D514AFD-C48D-460F-8D2B-C5380C118059}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "foreachnull", "foreachnull\foreachnull.csproj", "{9F8C50ED-7D77-4740-BBFC-283879D91F02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2D514AFD-C48D-460F-8D2B-C5380C118059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D514AFD-C48D-460F-8D2B-C5380C118059}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D514AFD-C48D-460F-8D2B-C5380C118059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F8C50ED-7D77-4740-BBFC-283879D91F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8C50ED-7D77-4740-BBFC-283879D91F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8C50ED-7D77-4740-BBFC-283879D91F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8C50ED-7D77-4740-BBFC-283879D91F02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

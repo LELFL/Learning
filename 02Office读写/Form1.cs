@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -61,9 +62,55 @@ namespace _02Office读写
         //读取excel并历遍输出里面的内容
         private void button2_Click(object sender, EventArgs e)
         {
+            using (FileStream fs = File.OpenRead(@"C:\Users\LUO\Desktop\1.xls"))
+            {
+                IWorkbook workbook = new HSSFWorkbook(fs);
+                ISheet sheet = workbook.GetSheetAt(0);
 
+                for (int i = 0; i < sheet.LastRowNum + 1; i++)
+                {
+                    IRow row = sheet.GetRow(i);
+
+                    for (int j = 0; j < row.LastCellNum; j++)
+                    {
+                        string cellValue = row.GetCell(j).ToString();
+                        Console.Write(cellValue + "\t");
+                    }
+                    Console.WriteLine();
+                }
+                
+            }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string sql = "select * from [Users]";
+            using (SqlDataReader reader = SqlHelper.ExecuteReaer(sql, CommandType.Text,null))
+            {
+                if (reader.HasRows)
+                {
+                    //创建workbook对象
+                    IWorkbook workbook = new HSSFWorkbook();
+                    ISheet sheet = workbook.CreateSheet("User");
+                    int index = 0;
+                    while (reader.Read())
+                    {
+                        //创建一行
+                        IRow row = sheet.CreateRow(index);
+                        row.CreateCell(0).SetCellValue(reader.GetInt32(0));
+                        row.CreateCell(1).SetCellValue(reader.GetString(1));
+                        row.CreateCell(2).SetCellValue(reader.GetString(2));
+                        index++;
+                    }
+                    //写入文件
+                    using (FileStream fs = File.OpenWrite(@"C:\Users\LUO\Desktop\1.xls"))
+                    {
+                        workbook.Write(fs);
+                    }
+                    MessageBox.Show("OK");
 
+                }
+            }
+        }
     }
 }
